@@ -4,3 +4,5 @@ parallel
 *.out
 *Zone.Identifier
 serial_omp
+assoc
+membench

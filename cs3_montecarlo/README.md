@@ -28,3 +28,5 @@ region is timed (generator seeding and jumps are inside it and included).
 - `mc_common.h` - RNG (xoshiro256**, splitmix64 seeding), Box-Muller, sampling kernel, Black-Scholes
 - `serial.c`    - serial baseline
 - `parallel.c`  - OpenMP version
+- `assoc.c`     - isolates floating-point non-associativity: same samples, different summation grouping (`./assoc [M] [seed]`)
+- `bench.sh`, `analyze.py` - timing runs and tables/graphs (`./bench.sh && python3 analyze.py`)

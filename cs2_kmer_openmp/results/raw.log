@@ -1,0 +1,283 @@
+exp=correct round=0 RESULT version=serial p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 time=0.208554
+exp=correct round=0 RESULT version=A p=2 k=8 L=100000000 dist=uniform total=99974980 checksum=7e3f75f29f470d73 badbins=20748 extra_mib=0.0 merge=0.000000 time=0.330772
+exp=correct round=0 RESULT version=A p=4 k=8 L=100000000 dist=uniform total=99967037 checksum=12a781126c41ad84 badbins=25905 extra_mib=0.0 merge=0.000000 time=0.289833
+exp=correct round=0 RESULT version=B p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=0 extra_mib=0.0 merge=0.000000 time=0.921678
+exp=correct round=0 RESULT version=B p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=0 extra_mib=0.0 merge=0.000000 time=0.945961
+exp=correct round=0 RESULT version=C p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=0 extra_mib=0.5 merge=0.000275 time=0.156810
+exp=correct round=0 RESULT version=C p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=0 extra_mib=1.0 merge=0.003768 time=0.161940
+exp=correct round=0 RESULT version=N p=2 k=8 L=100000000 dist=uniform total=99999986 checksum=7cb3174a59d1c075 badbins=7 extra_mib=0.0 merge=0.000000 time=0.177656
+exp=correct round=0 RESULT version=N p=4 k=8 L=100000000 dist=uniform total=99999972 checksum=0d2f0b3093acdd2d badbins=21 extra_mib=0.0 merge=0.000000 time=0.192915
+exp=correct round=0 RESULT version=serial p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 time=3.761936
+exp=correct round=0 RESULT version=A p=2 k=12 L=100000000 dist=uniform total=99999985 checksum=8dadd4cf6f047856 badbins=4 extra_mib=0.0 merge=0.000000 time=3.041412
+exp=correct round=0 RESULT version=A p=4 k=12 L=100000000 dist=uniform total=99999982 checksum=8aafd3adfda5976b badbins=7 extra_mib=0.0 merge=0.000000 time=2.907422
+exp=correct round=0 RESULT version=B p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=0 extra_mib=0.0 merge=0.000000 time=2.041225
+exp=correct round=0 RESULT version=B p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=0 extra_mib=0.0 merge=0.000000 time=1.725686
+exp=correct round=0 RESULT version=C p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=0 extra_mib=128.0 merge=0.060794 time=3.143564
+exp=correct round=0 RESULT version=C p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=0 extra_mib=256.0 merge=0.058989 time=3.395609
+exp=correct round=0 RESULT version=N p=2 k=12 L=100000000 dist=uniform total=99999978 checksum=bef41429ea0ae221 badbins=11 extra_mib=0.0 merge=0.000000 time=2.963433
+exp=correct round=0 RESULT version=N p=4 k=12 L=100000000 dist=uniform total=99999956 checksum=909e0da368668e0d badbins=33 extra_mib=0.0 merge=0.000000 time=3.355417
+exp=correct round=0 RESULT version=serial p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 time=0.161051
+exp=correct round=0 RESULT version=A p=2 k=8 L=100000000 dist=skewed total=98547593 checksum=74d762691e30a710 badbins=5434 extra_mib=0.0 merge=0.000000 time=0.371829
+exp=correct round=0 RESULT version=A p=4 k=8 L=100000000 dist=skewed total=97982867 checksum=c616340a65fad776 badbins=6035 extra_mib=0.0 merge=0.000000 time=0.354256
+exp=correct round=0 RESULT version=B p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=0 extra_mib=0.0 merge=0.000000 time=1.093115
+exp=correct round=0 RESULT version=B p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=0 extra_mib=0.0 merge=0.000000 time=0.917995
+exp=correct round=0 RESULT version=C p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=0 extra_mib=0.5 merge=0.000239 time=0.136046
+exp=correct round=0 RESULT version=C p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=0 extra_mib=1.0 merge=0.004859 time=0.124557
+exp=correct round=0 RESULT version=N p=2 k=8 L=100000000 dist=skewed total=99999986 checksum=19e08636492dee0b badbins=3 extra_mib=0.0 merge=0.000000 time=0.232479
+exp=correct round=0 RESULT version=N p=4 k=8 L=100000000 dist=skewed total=99999972 checksum=79667d94c2a04929 badbins=17 extra_mib=0.0 merge=0.000000 time=0.116664
+exp=correct round=0 RESULT version=serial p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 time=1.328861
+exp=correct round=0 RESULT version=A p=2 k=12 L=100000000 dist=skewed total=99988345 checksum=06611d62a9a5e296 badbins=3432 extra_mib=0.0 merge=0.000000 time=1.132051
+exp=correct round=0 RESULT version=A p=4 k=12 L=100000000 dist=skewed total=99983794 checksum=1eb7e79ed6f028f1 badbins=4185 extra_mib=0.0 merge=0.000000 time=0.995720
+exp=correct round=0 RESULT version=B p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=0 extra_mib=0.0 merge=0.000000 time=1.775779
+exp=correct round=0 RESULT version=B p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=0 extra_mib=0.0 merge=0.000000 time=1.544348
+exp=correct round=0 RESULT version=C p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=0 extra_mib=128.0 merge=0.054091 time=1.220983
+exp=correct round=0 RESULT version=C p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=0 extra_mib=256.0 merge=0.066021 time=1.455125
+exp=correct round=0 RESULT version=N p=2 k=12 L=100000000 dist=skewed total=99999978 checksum=ee83cf7a01e28dc3 badbins=8 extra_mib=0.0 merge=0.000000 time=1.286808
+exp=correct round=0 RESULT version=N p=4 k=12 L=100000000 dist=skewed total=99999956 checksum=8604eb884540914f badbins=30 extra_mib=0.0 merge=0.000000 time=1.432303
+exp=membench round=1 RESULT membench p=1 read_gbs=13.392 rmw_256k_mps=340.2 rmw_64m_mps=35.3
+exp=membench round=1 RESULT membench p=2 read_gbs=15.587 rmw_256k_mps=505.0 rmw_64m_mps=35.1
+exp=membench round=1 RESULT membench p=4 read_gbs=16.620 rmw_256k_mps=594.2 rmw_64m_mps=32.1
+exp=membench round=2 RESULT membench p=1 read_gbs=13.242 rmw_256k_mps=334.0 rmw_64m_mps=32.5
+exp=membench round=2 RESULT membench p=2 read_gbs=16.389 rmw_256k_mps=517.0 rmw_64m_mps=36.9
+exp=membench round=2 RESULT membench p=4 read_gbs=16.163 rmw_256k_mps=593.4 rmw_64m_mps=33.7
+exp=membench round=3 RESULT membench p=1 read_gbs=13.139 rmw_256k_mps=257.7 rmw_64m_mps=30.1
+exp=membench round=3 RESULT membench p=2 read_gbs=16.416 rmw_256k_mps=486.4 rmw_64m_mps=37.4
+exp=membench round=3 RESULT membench p=4 read_gbs=16.397 rmw_256k_mps=578.6 rmw_64m_mps=33.6
+exp=strong round=1 RESULT version=serial p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 time=0.389411
+exp=strong round=1 RESULT version=B p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.991505
+exp=strong round=1 RESULT version=B p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.028645
+exp=strong round=1 RESULT version=B p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.843823
+exp=strong round=1 RESULT version=C p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.2 merge=0.000369 time=0.224451
+exp=strong round=1 RESULT version=C p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.5 merge=0.000268 time=0.175427
+exp=strong round=1 RESULT version=C p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=1.0 merge=0.002813 time=0.155254
+exp=strong round=1 RESULT version=serial p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 time=2.988655
+exp=strong round=1 RESULT version=B p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.968829
+exp=strong round=1 RESULT version=B p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.133142
+exp=strong round=1 RESULT version=B p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.739927
+exp=strong round=1 RESULT version=C p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=64.0 merge=0.077844 time=3.537940
+exp=strong round=1 RESULT version=C p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=128.0 merge=0.055210 time=3.164099
+exp=strong round=1 RESULT version=C p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=256.0 merge=0.073818 time=3.171889
+exp=strong round=1 RESULT version=serial p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 time=0.449573
+exp=strong round=1 RESULT version=B p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.383174
+exp=strong round=1 RESULT version=B p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.009390
+exp=strong round=1 RESULT version=B p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.925297
+exp=strong round=1 RESULT version=C p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.2 merge=0.000225 time=0.161308
+exp=strong round=1 RESULT version=C p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.5 merge=0.000231 time=0.311542
+exp=strong round=1 RESULT version=C p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=1.0 merge=0.006537 time=0.214608
+exp=strong round=1 RESULT version=serial p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 time=1.275083
+exp=strong round=1 RESULT version=B p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.161324
+exp=strong round=1 RESULT version=B p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.643168
+exp=strong round=1 RESULT version=B p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.194657
+exp=strong round=1 RESULT version=C p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=64.0 merge=0.066193 time=1.628793
+exp=strong round=1 RESULT version=C p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=128.0 merge=0.060970 time=1.375543
+exp=strong round=1 RESULT version=C p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=256.0 merge=0.103300 time=1.852073
+exp=falseshare round=1 RESULT version=fs p=1 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.166977
+exp=falseshare round=1 RESULT version=fs p=2 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.301387
+exp=falseshare round=1 RESULT version=fs p=4 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.208693
+exp=falseshare round=1 RESULT version=fspad p=1 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.115170
+exp=falseshare round=1 RESULT version=fspad p=2 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.091138
+exp=falseshare round=1 RESULT version=fspad p=4 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.078525
+exp=strong round=2 RESULT version=serial p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 time=0.348465
+exp=strong round=2 RESULT version=B p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.051669
+exp=strong round=2 RESULT version=B p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.044642
+exp=strong round=2 RESULT version=B p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.848236
+exp=strong round=2 RESULT version=C p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.2 merge=0.000237 time=0.406830
+exp=strong round=2 RESULT version=C p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.5 merge=0.000259 time=0.149243
+exp=strong round=2 RESULT version=C p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=1.0 merge=0.003821 time=0.148407
+exp=strong round=2 RESULT version=serial p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 time=2.967350
+exp=strong round=2 RESULT version=B p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.988800
+exp=strong round=2 RESULT version=B p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.800190
+exp=strong round=2 RESULT version=B p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.056730
+exp=strong round=2 RESULT version=C p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=64.0 merge=0.065003 time=3.155168
+exp=strong round=2 RESULT version=C p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=128.0 merge=0.057290 time=2.860552
+exp=strong round=2 RESULT version=C p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=256.0 merge=0.065568 time=3.240939
+exp=strong round=2 RESULT version=serial p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 time=0.170074
+exp=strong round=2 RESULT version=B p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.865854
+exp=strong round=2 RESULT version=B p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.002510
+exp=strong round=2 RESULT version=B p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.922805
+exp=strong round=2 RESULT version=C p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.2 merge=0.000228 time=0.184627
+exp=strong round=2 RESULT version=C p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.5 merge=0.000246 time=0.138030
+exp=strong round=2 RESULT version=C p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=1.0 merge=0.001630 time=0.114806
+exp=strong round=2 RESULT version=serial p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 time=1.417798
+exp=strong round=2 RESULT version=B p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.101936
+exp=strong round=2 RESULT version=B p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.487945
+exp=strong round=2 RESULT version=B p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.380075
+exp=strong round=2 RESULT version=C p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=64.0 merge=0.061510 time=1.429388
+exp=strong round=2 RESULT version=C p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=128.0 merge=0.052668 time=1.373022
+exp=strong round=2 RESULT version=C p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=256.0 merge=0.083548 time=1.364649
+exp=falseshare round=2 RESULT version=fs p=1 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.114820
+exp=falseshare round=2 RESULT version=fs p=2 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.299992
+exp=falseshare round=2 RESULT version=fs p=4 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.199566
+exp=falseshare round=2 RESULT version=fspad p=1 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.114837
+exp=falseshare round=2 RESULT version=fspad p=2 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.086248
+exp=falseshare round=2 RESULT version=fspad p=4 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.074688
+exp=strong round=3 RESULT version=serial p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 time=0.206156
+exp=strong round=3 RESULT version=B p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.148611
+exp=strong round=3 RESULT version=B p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.044764
+exp=strong round=3 RESULT version=B p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.247814
+exp=strong round=3 RESULT version=C p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.2 merge=0.000467 time=0.311480
+exp=strong round=3 RESULT version=C p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.5 merge=0.000258 time=0.169593
+exp=strong round=3 RESULT version=C p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=1.0 merge=0.006534 time=0.155725
+exp=strong round=3 RESULT version=serial p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 time=2.951818
+exp=strong round=3 RESULT version=B p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.784016
+exp=strong round=3 RESULT version=B p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.960579
+exp=strong round=3 RESULT version=B p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.928809
+exp=strong round=3 RESULT version=C p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=64.0 merge=0.061664 time=3.473090
+exp=strong round=3 RESULT version=C p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=128.0 merge=0.054795 time=2.996933
+exp=strong round=3 RESULT version=C p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=256.0 merge=0.056478 time=3.157394
+exp=strong round=3 RESULT version=serial p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 time=0.181798
+exp=strong round=3 RESULT version=B p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.863897
+exp=strong round=3 RESULT version=B p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.956739
+exp=strong round=3 RESULT version=B p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.938553
+exp=strong round=3 RESULT version=C p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.2 merge=0.000224 time=0.179595
+exp=strong round=3 RESULT version=C p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.5 merge=0.000252 time=0.125720
+exp=strong round=3 RESULT version=C p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=1.0 merge=0.004171 time=0.119161
+exp=strong round=3 RESULT version=serial p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 time=1.294761
+exp=strong round=3 RESULT version=B p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.440454
+exp=strong round=3 RESULT version=B p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.397232
+exp=strong round=3 RESULT version=B p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.210581
+exp=strong round=3 RESULT version=C p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=64.0 merge=0.065743 time=1.354526
+exp=strong round=3 RESULT version=C p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=128.0 merge=0.111779 time=1.414896
+exp=strong round=3 RESULT version=C p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=256.0 merge=0.115952 time=1.770846
+exp=falseshare round=3 RESULT version=fs p=1 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.215568
+exp=falseshare round=3 RESULT version=fs p=2 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.278292
+exp=falseshare round=3 RESULT version=fs p=4 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.228095
+exp=falseshare round=3 RESULT version=fspad p=1 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.139754
+exp=falseshare round=3 RESULT version=fspad p=2 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.116104
+exp=falseshare round=3 RESULT version=fspad p=4 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.225774
+exp=strong round=4 RESULT version=serial p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 time=0.263787
+exp=strong round=4 RESULT version=B p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.118685
+exp=strong round=4 RESULT version=B p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.203984
+exp=strong round=4 RESULT version=B p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.853185
+exp=strong round=4 RESULT version=C p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.2 merge=0.000299 time=0.251231
+exp=strong round=4 RESULT version=C p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.5 merge=0.000206 time=0.170110
+exp=strong round=4 RESULT version=C p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=1.0 merge=0.004948 time=0.158606
+exp=strong round=4 RESULT version=serial p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 time=3.083261
+exp=strong round=4 RESULT version=B p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=3.306514
+exp=strong round=4 RESULT version=B p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.107037
+exp=strong round=4 RESULT version=B p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.648454
+exp=strong round=4 RESULT version=C p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=64.0 merge=0.106044 time=3.173582
+exp=strong round=4 RESULT version=C p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=128.0 merge=0.137917 time=2.900175
+exp=strong round=4 RESULT version=C p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=256.0 merge=0.061289 time=3.171772
+exp=strong round=4 RESULT version=serial p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 time=0.160937
+exp=strong round=4 RESULT version=B p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.890951
+exp=strong round=4 RESULT version=B p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.991599
+exp=strong round=4 RESULT version=B p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.921435
+exp=strong round=4 RESULT version=C p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.2 merge=0.000261 time=0.162078
+exp=strong round=4 RESULT version=C p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.5 merge=0.000261 time=0.194841
+exp=strong round=4 RESULT version=C p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=1.0 merge=0.000305 time=0.187892
+exp=strong round=4 RESULT version=serial p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 time=1.730157
+exp=strong round=4 RESULT version=B p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.111230
+exp=strong round=4 RESULT version=B p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.513085
+exp=strong round=4 RESULT version=B p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.197083
+exp=strong round=4 RESULT version=C p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=64.0 merge=0.064264 time=1.453481
+exp=strong round=4 RESULT version=C p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=128.0 merge=0.057855 time=1.301457
+exp=strong round=4 RESULT version=C p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=256.0 merge=0.074497 time=1.441913
+exp=falseshare round=4 RESULT version=fs p=1 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.113755
+exp=falseshare round=4 RESULT version=fs p=2 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.309724
+exp=falseshare round=4 RESULT version=fs p=4 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.206379
+exp=falseshare round=4 RESULT version=fspad p=1 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.118421
+exp=falseshare round=4 RESULT version=fspad p=2 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.085686
+exp=falseshare round=4 RESULT version=fspad p=4 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.096545
+exp=strong round=5 RESULT version=serial p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 time=0.202198
+exp=strong round=5 RESULT version=B p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.264006
+exp=strong round=5 RESULT version=B p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.092625
+exp=strong round=5 RESULT version=B p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.832766
+exp=strong round=5 RESULT version=C p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.2 merge=0.000233 time=0.203269
+exp=strong round=5 RESULT version=C p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.5 merge=0.000265 time=0.152255
+exp=strong round=5 RESULT version=C p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=1.0 merge=0.000190 time=0.149853
+exp=strong round=5 RESULT version=serial p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 time=3.015585
+exp=strong round=5 RESULT version=B p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=3.056389
+exp=strong round=5 RESULT version=B p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.078451
+exp=strong round=5 RESULT version=B p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.639631
+exp=strong round=5 RESULT version=C p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=64.0 merge=0.065134 time=3.287371
+exp=strong round=5 RESULT version=C p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=128.0 merge=0.108533 time=3.163188
+exp=strong round=5 RESULT version=C p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=256.0 merge=0.053807 time=3.118479
+exp=strong round=5 RESULT version=serial p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 time=0.348568
+exp=strong round=5 RESULT version=B p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.856460
+exp=strong round=5 RESULT version=B p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.048327
+exp=strong round=5 RESULT version=B p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.921089
+exp=strong round=5 RESULT version=C p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.2 merge=0.000227 time=0.184107
+exp=strong round=5 RESULT version=C p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.5 merge=0.000251 time=0.120949
+exp=strong round=5 RESULT version=C p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=1.0 merge=0.006293 time=0.130183
+exp=strong round=5 RESULT version=serial p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 time=1.507304
+exp=strong round=5 RESULT version=B p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.282432
+exp=strong round=5 RESULT version=B p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.477760
+exp=strong round=5 RESULT version=B p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.274840
+exp=strong round=5 RESULT version=C p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=64.0 merge=0.071217 time=1.384974
+exp=strong round=5 RESULT version=C p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=128.0 merge=0.054665 time=1.265115
+exp=strong round=5 RESULT version=C p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=256.0 merge=0.071534 time=1.386280
+exp=falseshare round=5 RESULT version=fs p=1 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.126441
+exp=falseshare round=5 RESULT version=fs p=2 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.282970
+exp=falseshare round=5 RESULT version=fs p=4 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.208525
+exp=falseshare round=5 RESULT version=fspad p=1 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.119643
+exp=falseshare round=5 RESULT version=fspad p=2 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.089568
+exp=falseshare round=5 RESULT version=fspad p=4 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.075224
+exp=strong round=6 RESULT version=serial p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 time=0.189716
+exp=strong round=6 RESULT version=B p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.091777
+exp=strong round=6 RESULT version=B p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.012614
+exp=strong round=6 RESULT version=B p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.841563
+exp=strong round=6 RESULT version=C p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.2 merge=0.000236 time=0.199243
+exp=strong round=6 RESULT version=C p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.5 merge=0.000262 time=0.165603
+exp=strong round=6 RESULT version=C p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=1.0 merge=0.004853 time=0.166626
+exp=strong round=6 RESULT version=serial p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 time=3.075654
+exp=strong round=6 RESULT version=B p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=3.757148
+exp=strong round=6 RESULT version=B p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.972724
+exp=strong round=6 RESULT version=B p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.682792
+exp=strong round=6 RESULT version=C p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=64.0 merge=0.061808 time=3.383052
+exp=strong round=6 RESULT version=C p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=128.0 merge=0.059802 time=2.853696
+exp=strong round=6 RESULT version=C p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=256.0 merge=0.058161 time=3.426513
+exp=strong round=6 RESULT version=serial p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 time=0.169672
+exp=strong round=6 RESULT version=B p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.065077
+exp=strong round=6 RESULT version=B p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.933920
+exp=strong round=6 RESULT version=B p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.926469
+exp=strong round=6 RESULT version=C p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.2 merge=0.000222 time=0.159370
+exp=strong round=6 RESULT version=C p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.5 merge=0.000213 time=0.229350
+exp=strong round=6 RESULT version=C p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=1.0 merge=0.003193 time=0.120958
+exp=strong round=6 RESULT version=serial p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 time=1.308489
+exp=strong round=6 RESULT version=B p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.109195
+exp=strong round=6 RESULT version=B p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.566694
+exp=strong round=6 RESULT version=B p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.191852
+exp=strong round=6 RESULT version=C p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=64.0 merge=0.061131 time=1.502667
+exp=strong round=6 RESULT version=C p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=128.0 merge=0.049847 time=1.302302
+exp=strong round=6 RESULT version=C p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=256.0 merge=0.066122 time=1.461303
+exp=falseshare round=6 RESULT version=fs p=1 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.113118
+exp=falseshare round=6 RESULT version=fs p=2 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.333978
+exp=falseshare round=6 RESULT version=fs p=4 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.200360
+exp=falseshare round=6 RESULT version=fspad p=1 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.112597
+exp=falseshare round=6 RESULT version=fspad p=2 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.092530
+exp=falseshare round=6 RESULT version=fspad p=4 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.078217
+exp=strong round=7 RESULT version=serial p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 time=0.291803
+exp=strong round=7 RESULT version=B p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.300851
+exp=strong round=7 RESULT version=B p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.976018
+exp=strong round=7 RESULT version=B p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.838347
+exp=strong round=7 RESULT version=C p=1 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.2 merge=0.000239 time=0.203226
+exp=strong round=7 RESULT version=C p=2 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=0.5 merge=0.000263 time=0.153008
+exp=strong round=7 RESULT version=C p=4 k=8 L=100000000 dist=uniform total=99999993 checksum=fa0347f8690ffe78 badbins=-1 extra_mib=1.0 merge=0.002015 time=0.150139
+exp=strong round=7 RESULT version=serial p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 time=3.032200
+exp=strong round=7 RESULT version=B p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=3.077149
+exp=strong round=7 RESULT version=B p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.077319
+exp=strong round=7 RESULT version=B p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.912263
+exp=strong round=7 RESULT version=C p=1 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=64.0 merge=0.081306 time=3.250312
+exp=strong round=7 RESULT version=C p=2 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=128.0 merge=0.051108 time=2.722384
+exp=strong round=7 RESULT version=C p=4 k=12 L=100000000 dist=uniform total=99999989 checksum=df4bf5d855aa3586 badbins=-1 extra_mib=256.0 merge=0.064672 time=3.200547
+exp=strong round=7 RESULT version=serial p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 time=0.157830
+exp=strong round=7 RESULT version=B p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.872782
+exp=strong round=7 RESULT version=B p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.934560
+exp=strong round=7 RESULT version=B p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.938829
+exp=strong round=7 RESULT version=C p=1 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.2 merge=0.000227 time=0.174996
+exp=strong round=7 RESULT version=C p=2 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=0.5 merge=0.000249 time=0.140838
+exp=strong round=7 RESULT version=C p=4 k=8 L=100000000 dist=skewed total=99999993 checksum=eb820f888c4a1670 badbins=-1 extra_mib=1.0 merge=0.004481 time=0.116706
+exp=strong round=7 RESULT version=serial p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 time=1.316843
+exp=strong round=7 RESULT version=B p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=2.318580
+exp=strong round=7 RESULT version=B p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.424155
+exp=strong round=7 RESULT version=B p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=0.0 merge=0.000000 time=1.204243
+exp=strong round=7 RESULT version=C p=1 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=64.0 merge=0.090029 time=1.786137
+exp=strong round=7 RESULT version=C p=2 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=128.0 merge=0.058740 time=1.561070
+exp=strong round=7 RESULT version=C p=4 k=12 L=100000000 dist=skewed total=99999989 checksum=ba6b47b018b9c870 badbins=-1 extra_mib=256.0 merge=0.057919 time=1.391927
+exp=falseshare round=7 RESULT version=fs p=1 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.135705
+exp=falseshare round=7 RESULT version=fs p=2 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.323829
+exp=falseshare round=7 RESULT version=fs p=4 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.206983
+exp=falseshare round=7 RESULT version=fspad p=1 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.114812
+exp=falseshare round=7 RESULT version=fspad p=2 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.094715
+exp=falseshare round=7 RESULT version=fspad p=4 k=1 L=100000000 dist=uniform total=100000000 checksum=f4cac58cc4cd4471 badbins=-1 extra_mib=0.0 merge=0.000000 time=0.077202

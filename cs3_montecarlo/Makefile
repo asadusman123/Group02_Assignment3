@@ -3,13 +3,16 @@ CC      = gcc
 CFLAGS  = -O3 -march=native -Wall -Wextra -std=c11
 LDLIBS  = -lm
 
-all: serial parallel
+all: serial parallel assoc
 
 serial: serial.c mc_common.h
 	$(CC) $(CFLAGS) -o $@ serial.c $(LDLIBS)
 
 parallel: parallel.c mc_common.h
 	$(CC) $(CFLAGS) -fopenmp -o $@ parallel.c $(LDLIBS)
+
+assoc: assoc.c mc_common.h
+	$(CC) $(CFLAGS) -o $@ assoc.c $(LDLIBS)
 
 # quick correctness check: p=1 must equal serial bit-for-bit,
 # and two runs with the same p must agree exactly
@@ -22,6 +25,6 @@ check: all
 	done
 
 clean:
-	rm -f serial parallel
+	rm -f serial parallel assoc
 
 .PHONY: all check clean
