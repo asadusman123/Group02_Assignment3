@@ -1,0 +1,176 @@
+exp=verify decomp=1d mode=blocking p=1 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=1d mode=blocking p=2 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=1d mode=blocking p=4 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=1d mode=nonblocking p=1 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=1d mode=nonblocking p=2 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=1d mode=nonblocking p=4 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=1d mode=nbtest p=1 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=1d mode=nbtest p=2 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=1d mode=nbtest p=4 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=2d mode=blocking p=1 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=2d mode=blocking p=2 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=2d mode=blocking p=4 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=2d mode=nonblocking p=1 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=2d mode=nonblocking p=2 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=2d mode=nonblocking p=4 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=2d mode=nbtest p=1 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=2d mode=nbtest p=2 N=1024 T=500 result=IDENTICAL
+exp=verify decomp=2d mode=nbtest p=4 N=1024 T=500 result=IDENTICAL
+exp=strong round=1 RESULT version=serial p=1 dims=1x1 comm=none N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=1.050065 comp=1.050065 comm_t=0 reduce=0
+exp=strong round=1 RESULT version=parallel p=1 dims=1x1 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=0.885744 comp=0.884644 comm_t=0.000791 reduce=0.000045 cells=1048576 halo=0
+exp=strong round=1 RESULT version=parallel p=2 dims=2x1 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=0.824000 comp=0.775659 comm_t=0.065603 reduce=0.007641 cells=524288 halo=1024
+exp=strong round=1 RESULT version=parallel p=4 dims=4x1 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379782237 maxdiff=6.336026e-02 time=2.004457 comp=0.526642 comm_t=1.549379 reduce=0.032787 cells=262144 halo=2048
+exp=strong round=1 RESULT version=parallel p=4 dims=2x2 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=2.671508 comp=0.519807 comm_t=2.154837 reduce=0.028606 cells=262144 halo=1024
+exp=strong round=1 RESULT version=parallel p=1 dims=1x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=0.871014 comp=0.869165 comm_t=0.001466 reduce=0.000043 cells=1048576 halo=0
+exp=strong round=1 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=0.835934 comp=0.782673 comm_t=0.059379 reduce=0.001971 cells=524288 halo=1024
+exp=strong round=1 RESULT version=parallel p=4 dims=4x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379782237 maxdiff=6.336026e-02 time=1.270493 comp=0.618120 comm_t=0.719660 reduce=0.033164 cells=262144 halo=2048
+exp=strong round=1 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=1.846517 comp=0.570214 comm_t=1.286251 reduce=0.030767 cells=262144 halo=1024
+exp=strong round=1 RESULT version=parallel p=1 dims=1x1 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=0.874932 comp=0.872781 comm_t=0.001733 reduce=0.000044 cells=1048576 halo=0
+exp=strong round=1 RESULT version=parallel p=2 dims=2x1 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=0.805508 comp=0.774575 comm_t=0.043294 reduce=0.008998 cells=524288 halo=1024
+exp=strong round=1 RESULT version=parallel p=4 dims=4x1 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379782237 maxdiff=6.336026e-02 time=2.137729 comp=0.649851 comm_t=1.515728 reduce=0.066525 cells=262144 halo=2048
+exp=strong round=1 RESULT version=parallel p=4 dims=2x2 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=1.805646 comp=0.622635 comm_t=1.214102 reduce=0.033135 cells=262144 halo=1024
+exp=strong round=2 RESULT version=serial p=1 dims=1x1 comm=none N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=1.046619 comp=1.046619 comm_t=0 reduce=0
+exp=strong round=2 RESULT version=parallel p=1 dims=1x1 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=0.977116 comp=0.975907 comm_t=0.000884 reduce=0.000044 cells=1048576 halo=0
+exp=strong round=2 RESULT version=parallel p=2 dims=2x1 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=0.923631 comp=0.835664 comm_t=0.089240 reduce=0.003108 cells=524288 halo=1024
+exp=strong round=2 RESULT version=parallel p=4 dims=4x1 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379782237 maxdiff=6.336026e-02 time=1.995691 comp=0.578145 comm_t=1.543676 reduce=0.029503 cells=262144 halo=2048
+exp=strong round=2 RESULT version=parallel p=4 dims=2x2 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=2.385067 comp=0.526670 comm_t=1.869880 reduce=0.036666 cells=262144 halo=1024
+exp=strong round=2 RESULT version=parallel p=1 dims=1x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=1.069291 comp=1.067159 comm_t=0.001636 reduce=0.000044 cells=1048576 halo=0
+exp=strong round=2 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=0.839018 comp=0.799224 comm_t=0.063795 reduce=0.000138 cells=524288 halo=1024
+exp=strong round=2 RESULT version=parallel p=4 dims=4x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379782237 maxdiff=6.336026e-02 time=1.221256 comp=0.600756 comm_t=0.674050 reduce=0.028648 cells=262144 halo=2048
+exp=strong round=2 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=1.696390 comp=0.567719 comm_t=1.128072 reduce=0.034238 cells=262144 halo=1024
+exp=strong round=2 RESULT version=parallel p=1 dims=1x1 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=0.874710 comp=0.872681 comm_t=0.001622 reduce=0.000047 cells=1048576 halo=0
+exp=strong round=2 RESULT version=parallel p=2 dims=2x1 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=0.833581 comp=0.794087 comm_t=0.041424 reduce=0.007301 cells=524288 halo=1024
+exp=strong round=2 RESULT version=parallel p=4 dims=4x1 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379782237 maxdiff=6.336026e-02 time=1.158819 comp=0.629745 comm_t=0.556373 reduce=0.037587 cells=262144 halo=2048
+exp=strong round=2 RESULT version=parallel p=4 dims=2x2 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=4.952767 comp=0.607287 comm_t=4.320344 reduce=0.102533 cells=262144 halo=1024
+exp=strong round=3 RESULT version=serial p=1 dims=1x1 comm=none N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=1.152951 comp=1.152951 comm_t=0 reduce=0
+exp=strong round=3 RESULT version=parallel p=1 dims=1x1 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=0.897835 comp=0.896840 comm_t=0.000680 reduce=0.000040 cells=1048576 halo=0
+exp=strong round=3 RESULT version=parallel p=2 dims=2x1 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=2.317244 comp=1.321866 comm_t=1.277138 reduce=0.026489 cells=524288 halo=1024
+exp=strong round=3 RESULT version=parallel p=4 dims=4x1 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379782237 maxdiff=6.336026e-02 time=3.771076 comp=0.549220 comm_t=3.323827 reduce=0.042556 cells=262144 halo=2048
+exp=strong round=3 RESULT version=parallel p=4 dims=2x2 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=3.893471 comp=0.575298 comm_t=3.334066 reduce=0.056606 cells=262144 halo=1024
+exp=strong round=3 RESULT version=parallel p=1 dims=1x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=0.897744 comp=0.895844 comm_t=0.001508 reduce=0.000048 cells=1048576 halo=0
+exp=strong round=3 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=0.817514 comp=0.778114 comm_t=0.062603 reduce=0.000110 cells=524288 halo=1024
+exp=strong round=3 RESULT version=parallel p=4 dims=4x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379782237 maxdiff=6.336026e-02 time=1.265890 comp=0.645016 comm_t=0.682540 reduce=0.039763 cells=262144 halo=2048
+exp=strong round=3 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=1.829490 comp=0.588042 comm_t=1.279823 reduce=0.026333 cells=262144 halo=1024
+exp=strong round=3 RESULT version=parallel p=1 dims=1x1 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=0.878502 comp=0.876357 comm_t=0.001701 reduce=0.000041 cells=1048576 halo=0
+exp=strong round=3 RESULT version=parallel p=2 dims=2x1 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=0.810952 comp=0.775084 comm_t=0.034864 reduce=0.004755 cells=524288 halo=1024
+exp=strong round=3 RESULT version=parallel p=4 dims=4x1 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379782237 maxdiff=6.336026e-02 time=1.202668 comp=0.635161 comm_t=0.600753 reduce=0.037482 cells=262144 halo=2048
+exp=strong round=3 RESULT version=parallel p=4 dims=2x2 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=1.364724 comp=0.590076 comm_t=0.743240 reduce=0.042328 cells=262144 halo=1024
+exp=strong round=4 RESULT version=serial p=1 dims=1x1 comm=none N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=1.088799 comp=1.088799 comm_t=0 reduce=0
+exp=strong round=4 RESULT version=parallel p=1 dims=1x1 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=0.874548 comp=0.873400 comm_t=0.000803 reduce=0.000044 cells=1048576 halo=0
+exp=strong round=4 RESULT version=parallel p=2 dims=2x1 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=0.823147 comp=0.769652 comm_t=0.051976 reduce=0.004173 cells=524288 halo=1024
+exp=strong round=4 RESULT version=parallel p=4 dims=4x1 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379782237 maxdiff=6.336026e-02 time=2.149563 comp=0.590890 comm_t=1.646432 reduce=0.033475 cells=262144 halo=2048
+exp=strong round=4 RESULT version=parallel p=4 dims=2x2 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=2.497800 comp=0.544283 comm_t=1.965755 reduce=0.037032 cells=262144 halo=1024
+exp=strong round=4 RESULT version=parallel p=1 dims=1x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=1.027740 comp=1.025415 comm_t=0.001883 reduce=0.000046 cells=1048576 halo=0
+exp=strong round=4 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=1.023111 comp=0.874708 comm_t=0.199282 reduce=0.011646 cells=524288 halo=1024
+exp=strong round=4 RESULT version=parallel p=4 dims=4x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379782237 maxdiff=6.336026e-02 time=1.224369 comp=0.656945 comm_t=0.628360 reduce=0.045977 cells=262144 halo=2048
+exp=strong round=4 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=2.367271 comp=0.693052 comm_t=1.752774 reduce=0.040764 cells=262144 halo=1024
+exp=strong round=4 RESULT version=parallel p=1 dims=1x1 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=0.936041 comp=0.933557 comm_t=0.001942 reduce=0.000042 cells=1048576 halo=0
+exp=strong round=4 RESULT version=parallel p=2 dims=2x1 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=0.817845 comp=0.780607 comm_t=0.037409 reduce=0.008665 cells=524288 halo=1024
+exp=strong round=4 RESULT version=parallel p=4 dims=4x1 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379782237 maxdiff=6.336026e-02 time=1.103350 comp=0.617923 comm_t=0.513647 reduce=0.035840 cells=262144 halo=2048
+exp=strong round=4 RESULT version=parallel p=4 dims=2x2 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=1.374869 comp=0.596283 comm_t=0.781055 reduce=0.028316 cells=262144 halo=1024
+exp=strong round=5 RESULT version=serial p=1 dims=1x1 comm=none N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=0.874763 comp=0.874763 comm_t=0 reduce=0
+exp=strong round=5 RESULT version=parallel p=1 dims=1x1 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=0.863225 comp=0.862191 comm_t=0.000733 reduce=0.000047 cells=1048576 halo=0
+exp=strong round=5 RESULT version=parallel p=2 dims=2x1 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=0.952746 comp=0.900773 comm_t=0.147683 reduce=0.005351 cells=524288 halo=1024
+exp=strong round=5 RESULT version=parallel p=4 dims=4x1 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379782237 maxdiff=6.336026e-02 time=2.054915 comp=0.586362 comm_t=1.585921 reduce=0.036062 cells=262144 halo=2048
+exp=strong round=5 RESULT version=parallel p=4 dims=2x2 comm=blocking N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=2.725810 comp=0.537658 comm_t=2.223317 reduce=0.034229 cells=262144 halo=1024
+exp=strong round=5 RESULT version=parallel p=1 dims=1x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=0.896891 comp=0.895013 comm_t=0.001456 reduce=0.000042 cells=1048576 halo=0
+exp=strong round=5 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=0.813554 comp=0.773982 comm_t=0.051000 reduce=0.000188 cells=524288 halo=1024
+exp=strong round=5 RESULT version=parallel p=4 dims=4x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379782237 maxdiff=6.336026e-02 time=1.221943 comp=0.612984 comm_t=0.674404 reduce=0.021465 cells=262144 halo=2048
+exp=strong round=5 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=1.781867 comp=0.636243 comm_t=1.197399 reduce=0.039967 cells=262144 halo=1024
+exp=strong round=5 RESULT version=parallel p=1 dims=1x1 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=0.923118 comp=0.920544 comm_t=0.002151 reduce=0.000049 cells=1048576 halo=0
+exp=strong round=5 RESULT version=parallel p=2 dims=2x1 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=1.007477 comp=0.872681 comm_t=0.117857 reduce=0.015580 cells=524288 halo=1024
+exp=strong round=5 RESULT version=parallel p=4 dims=4x1 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379782237 maxdiff=6.336026e-02 time=1.732396 comp=0.637324 comm_t=1.119659 reduce=0.053639 cells=262144 halo=2048
+exp=strong round=5 RESULT version=parallel p=4 dims=2x2 comm=nbtest N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=1.389047 comp=0.618821 comm_t=0.769790 reduce=0.045926 cells=262144 halo=1024
+exp=strong round=1 RESULT version=serial p=1 dims=1x1 comm=none N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=13.792460 comp=13.792460 comm_t=0 reduce=0
+exp=strong round=1 RESULT version=parallel p=1 dims=1x1 comm=blocking N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=13.399157 comp=13.397808 comm_t=0.000961 reduce=0.000051 cells=16777216 halo=0
+exp=strong round=1 RESULT version=parallel p=2 dims=2x1 comm=blocking N=4096 T=500 K=50 checksum=10837733.0898876674 maxdiff=6.336026e-02 time=12.626490 comp=12.249048 comm_t=0.416217 reduce=0.034688 cells=8388608 halo=4096
+exp=strong round=1 RESULT version=parallel p=4 dims=4x1 comm=blocking N=4096 T=500 K=50 checksum=10837733.0898854602 maxdiff=6.336026e-02 time=14.408082 comp=11.166859 comm_t=3.317934 reduce=0.112048 cells=4194304 halo=8192
+exp=strong round=1 RESULT version=parallel p=4 dims=2x2 comm=blocking N=4096 T=500 K=50 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=15.141005 comp=10.836235 comm_t=4.461587 reduce=0.063607 cells=4194304 halo=4096
+exp=strong round=1 RESULT version=parallel p=1 dims=1x1 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=13.626546 comp=13.624182 comm_t=0.001928 reduce=0.000047 cells=16777216 halo=0
+exp=strong round=1 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898876674 maxdiff=6.336026e-02 time=12.537956 comp=12.206435 comm_t=0.347266 reduce=0.000165 cells=8388608 halo=4096
+exp=strong round=1 RESULT version=parallel p=4 dims=4x1 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898854602 maxdiff=6.336026e-02 time=13.513669 comp=12.602321 comm_t=1.412239 reduce=0.281392 cells=4194304 halo=8192
+exp=strong round=1 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=16.441134 comp=13.435886 comm_t=3.298754 reduce=0.095389 cells=4194304 halo=4096
+exp=strong round=1 RESULT version=parallel p=1 dims=1x1 comm=nbtest N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=14.423664 comp=14.420667 comm_t=0.002517 reduce=0.000049 cells=16777216 halo=0
+exp=strong round=1 RESULT version=parallel p=2 dims=2x1 comm=nbtest N=4096 T=500 K=50 checksum=10837733.0898876674 maxdiff=6.336026e-02 time=13.037184 comp=12.948870 comm_t=0.085240 reduce=0.058190 cells=8388608 halo=4096
+exp=strong round=1 RESULT version=parallel p=4 dims=4x1 comm=nbtest N=4096 T=500 K=50 checksum=10837733.0898854602 maxdiff=6.336026e-02 time=14.393225 comp=13.746821 comm_t=1.066895 reduce=0.275515 cells=4194304 halo=8192
+exp=strong round=1 RESULT version=parallel p=4 dims=2x2 comm=nbtest N=4096 T=500 K=50 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=13.617398 comp=12.802445 comm_t=0.962563 reduce=0.174069 cells=4194304 halo=4096
+exp=strong round=2 RESULT version=serial p=1 dims=1x1 comm=none N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=13.762214 comp=13.762214 comm_t=0 reduce=0
+exp=strong round=2 RESULT version=parallel p=1 dims=1x1 comm=blocking N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=13.398046 comp=13.396663 comm_t=0.001004 reduce=0.000050 cells=16777216 halo=0
+exp=strong round=2 RESULT version=parallel p=2 dims=2x1 comm=blocking N=4096 T=500 K=50 checksum=10837733.0898876674 maxdiff=6.336026e-02 time=13.996978 comp=13.351239 comm_t=0.752342 reduce=0.059737 cells=8388608 halo=4096
+exp=strong round=2 RESULT version=parallel p=4 dims=4x1 comm=blocking N=4096 T=500 K=50 checksum=10837733.0898854602 maxdiff=6.336026e-02 time=13.569356 comp=10.820594 comm_t=2.842063 reduce=0.074697 cells=4194304 halo=8192
+exp=strong round=2 RESULT version=parallel p=4 dims=2x2 comm=blocking N=4096 T=500 K=50 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=13.788185 comp=10.649487 comm_t=3.273420 reduce=0.063048 cells=4194304 halo=4096
+exp=strong round=2 RESULT version=parallel p=1 dims=1x1 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=13.479978 comp=13.477627 comm_t=0.001870 reduce=0.000046 cells=16777216 halo=0
+exp=strong round=2 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898876674 maxdiff=6.336026e-02 time=13.129296 comp=12.827035 comm_t=0.365679 reduce=0.059128 cells=8388608 halo=4096
+exp=strong round=2 RESULT version=parallel p=4 dims=4x1 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898854602 maxdiff=6.336026e-02 time=12.840166 comp=11.979313 comm_t=0.855317 reduce=0.315332 cells=4194304 halo=8192
+exp=strong round=2 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=12.698249 comp=10.984673 comm_t=1.750686 reduce=0.089322 cells=4194304 halo=4096
+exp=strong round=2 RESULT version=parallel p=1 dims=1x1 comm=nbtest N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=13.578684 comp=13.575637 comm_t=0.002584 reduce=0.000051 cells=16777216 halo=0
+exp=strong round=2 RESULT version=parallel p=2 dims=2x1 comm=nbtest N=4096 T=500 K=50 checksum=10837733.0898876674 maxdiff=6.336026e-02 time=13.129658 comp=13.056488 comm_t=0.100285 reduce=0.043632 cells=8388608 halo=4096
+exp=strong round=2 RESULT version=parallel p=4 dims=4x1 comm=nbtest N=4096 T=500 K=50 checksum=10837733.0898854602 maxdiff=6.336026e-02 time=12.701288 comp=12.273331 comm_t=0.580013 reduce=0.153622 cells=4194304 halo=8192
+exp=strong round=2 RESULT version=parallel p=4 dims=2x2 comm=nbtest N=4096 T=500 K=50 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=13.571980 comp=12.355729 comm_t=1.197319 reduce=0.152134 cells=4194304 halo=4096
+exp=strong round=3 RESULT version=serial p=1 dims=1x1 comm=none N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=14.692517 comp=14.692517 comm_t=0 reduce=0
+exp=strong round=3 RESULT version=parallel p=1 dims=1x1 comm=blocking N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=16.107482 comp=16.105768 comm_t=0.001229 reduce=0.000047 cells=16777216 halo=0
+exp=strong round=3 RESULT version=parallel p=2 dims=2x1 comm=blocking N=4096 T=500 K=50 checksum=10837733.0898876674 maxdiff=6.336026e-02 time=12.963081 comp=12.505305 comm_t=0.434167 reduce=0.047233 cells=8388608 halo=4096
+exp=strong round=3 RESULT version=parallel p=4 dims=4x1 comm=blocking N=4096 T=500 K=50 checksum=10837733.0898854602 maxdiff=6.336026e-02 time=13.502288 comp=10.990209 comm_t=2.697357 reduce=0.075191 cells=4194304 halo=8192
+exp=strong round=3 RESULT version=parallel p=4 dims=2x2 comm=blocking N=4096 T=500 K=50 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=16.333539 comp=11.259050 comm_t=5.405203 reduce=0.098354 cells=4194304 halo=4096
+exp=strong round=3 RESULT version=parallel p=1 dims=1x1 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=15.241338 comp=15.238622 comm_t=0.002184 reduce=0.000047 cells=16777216 halo=0
+exp=strong round=3 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898876674 maxdiff=6.336026e-02 time=17.884602 comp=17.489402 comm_t=0.537581 reduce=0.069939 cells=8388608 halo=4096
+exp=strong round=3 RESULT version=parallel p=4 dims=4x1 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898854602 maxdiff=6.336026e-02 time=13.084585 comp=12.181141 comm_t=1.017071 reduce=0.167348 cells=4194304 halo=8192
+exp=strong round=3 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=12.916097 comp=11.010571 comm_t=1.887605 reduce=0.081236 cells=4194304 halo=4096
+exp=strong round=3 RESULT version=parallel p=1 dims=1x1 comm=nbtest N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=14.122741 comp=14.119474 comm_t=0.002721 reduce=0.000049 cells=16777216 halo=0
+exp=strong round=3 RESULT version=parallel p=2 dims=2x1 comm=nbtest N=4096 T=500 K=50 checksum=10837733.0898876674 maxdiff=6.336026e-02 time=12.602264 comp=12.485970 comm_t=0.077055 reduce=0.070715 cells=8388608 halo=4096
+exp=strong round=3 RESULT version=parallel p=4 dims=4x1 comm=nbtest N=4096 T=500 K=50 checksum=10837733.0898854602 maxdiff=6.336026e-02 time=12.378031 comp=11.861479 comm_t=0.522240 reduce=0.168240 cells=4194304 halo=8192
+exp=strong round=3 RESULT version=parallel p=4 dims=2x2 comm=nbtest N=4096 T=500 K=50 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=13.931113 comp=12.879968 comm_t=1.109514 reduce=0.156212 cells=4194304 halo=4096
+exp=kcost round=1 RESULT version=serial p=1 dims=1x1 comm=none N=1024 T=500 K=1 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=1.751989 comp=1.751989 comm_t=0 reduce=0
+exp=kcost round=1 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=1024 T=500 K=1 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=1.837855 comp=1.605659 comm_t=0.220060 reduce=0.019716 cells=524288 halo=1024
+exp=kcost round=1 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=1024 T=500 K=1 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=6.726385 comp=1.479728 comm_t=3.068408 reduce=2.774860 cells=262144 halo=1024
+exp=kcost round=1 RESULT version=serial p=1 dims=1x1 comm=none N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=1.344493 comp=1.344493 comm_t=0 reduce=0
+exp=kcost round=1 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=1.979867 comp=1.500084 comm_t=0.673552 reduce=0.017997 cells=524288 halo=1024
+exp=kcost round=1 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=7.564694 comp=1.560383 comm_t=6.553405 reduce=0.097743 cells=262144 halo=1024
+exp=kcost round=1 RESULT version=serial p=1 dims=1x1 comm=none N=4096 T=500 K=1 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=60.670645 comp=60.670645 comm_t=0 reduce=0
+exp=kcost round=1 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=4096 T=500 K=1 checksum=10837733.0898876674 maxdiff=6.336026e-02 time=32.054531 comp=30.425048 comm_t=1.450326 reduce=0.455638 cells=8388608 halo=4096
+exp=kcost round=1 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=4096 T=500 K=1 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=34.390956 comp=27.045190 comm_t=4.575620 reduce=3.166023 cells=4194304 halo=4096
+exp=kcost round=1 RESULT version=serial p=1 dims=1x1 comm=none N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=26.751634 comp=26.751634 comm_t=0 reduce=0
+exp=kcost round=1 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898876674 maxdiff=6.336026e-02 time=20.390693 comp=19.867106 comm_t=0.920072 reduce=0.060486 cells=8388608 halo=4096
+exp=kcost round=1 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=21.077719 comp=16.860922 comm_t=4.701092 reduce=0.139228 cells=4194304 halo=4096
+exp=kcost round=2 RESULT version=serial p=1 dims=1x1 comm=none N=1024 T=500 K=1 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=2.034399 comp=2.034399 comm_t=0 reduce=0
+exp=kcost round=2 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=1024 T=500 K=1 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=2.146345 comp=1.809812 comm_t=0.407963 reduce=0.074661 cells=524288 halo=1024
+exp=kcost round=2 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=1024 T=500 K=1 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=4.675759 comp=1.328931 comm_t=1.751549 reduce=1.830745 cells=262144 halo=1024
+exp=kcost round=2 RESULT version=serial p=1 dims=1x1 comm=none N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=1.040077 comp=1.040077 comm_t=0 reduce=0
+exp=kcost round=2 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=0.901128 comp=0.843234 comm_t=0.074766 reduce=0.002453 cells=524288 halo=1024
+exp=kcost round=2 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=2.904877 comp=0.740071 comm_t=2.207673 reduce=0.038580 cells=262144 halo=1024
+exp=kcost round=2 RESULT version=serial p=1 dims=1x1 comm=none N=4096 T=500 K=1 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=34.267695 comp=34.267695 comm_t=0 reduce=0
+exp=kcost round=2 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=4096 T=500 K=1 checksum=10837733.0898876674 maxdiff=6.336026e-02 time=23.341855 comp=22.239341 comm_t=1.083342 reduce=0.059931 cells=8388608 halo=4096
+exp=kcost round=2 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=4096 T=500 K=1 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=26.491364 comp=21.002014 comm_t=3.482845 reduce=2.772773 cells=4194304 halo=4096
+exp=kcost round=2 RESULT version=serial p=1 dims=1x1 comm=none N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=14.444598 comp=14.444598 comm_t=0 reduce=0
+exp=kcost round=2 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898876674 maxdiff=6.336026e-02 time=13.354370 comp=13.069936 comm_t=0.277829 reduce=0.020397 cells=8388608 halo=4096
+exp=kcost round=2 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=14.775663 comp=11.922966 comm_t=3.025415 reduce=0.094707 cells=4194304 halo=4096
+exp=kcost round=3 RESULT version=serial p=1 dims=1x1 comm=none N=1024 T=500 K=1 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=2.029443 comp=2.029443 comm_t=0 reduce=0
+exp=kcost round=3 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=1024 T=500 K=1 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=1.536923 comp=1.348709 comm_t=0.215368 reduce=0.015809 cells=524288 halo=1024
+exp=kcost round=3 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=1024 T=500 K=1 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=3.401431 comp=1.096073 comm_t=1.203149 reduce=1.285303 cells=262144 halo=1024
+exp=kcost round=3 RESULT version=serial p=1 dims=1x1 comm=none N=1024 T=500 K=50 checksum=2685953.7379774670 maxdiff=6.336026e-02 time=1.359162 comp=1.359162 comm_t=0 reduce=0
+exp=kcost round=3 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379781990 maxdiff=6.336026e-02 time=0.868359 comp=0.808365 comm_t=0.064665 reduce=0.000206 cells=524288 halo=1024
+exp=kcost round=3 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=1024 T=500 K=50 checksum=2685953.7379783322 maxdiff=6.336026e-02 time=1.911128 comp=0.618654 comm_t=1.303927 reduce=0.023750 cells=262144 halo=1024
+exp=kcost round=3 RESULT version=serial p=1 dims=1x1 comm=none N=4096 T=500 K=1 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=30.614167 comp=30.614167 comm_t=0 reduce=0
+exp=kcost round=3 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=4096 T=500 K=1 checksum=10837733.0898876674 maxdiff=6.336026e-02 time=23.127374 comp=22.179521 comm_t=0.880420 reduce=0.102271 cells=8388608 halo=4096
+exp=kcost round=3 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=4096 T=500 K=1 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=23.074205 comp=19.106840 comm_t=2.894249 reduce=1.838534 cells=4194304 halo=4096
+exp=kcost round=3 RESULT version=serial p=1 dims=1x1 comm=none N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=17.116471 comp=17.116471 comm_t=0 reduce=0
+exp=kcost round=3 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898876674 maxdiff=6.336026e-02 time=15.382378 comp=14.930885 comm_t=0.471995 reduce=0.062637 cells=8388608 halo=4096
+exp=kcost round=3 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=13.471635 comp=11.521900 comm_t=1.992636 reduce=0.073284 cells=4194304 halo=4096
+exp=weak round=1 RESULT version=parallel p=1 dims=1x1 comm=nonblocking N=2048 T=500 K=50 checksum=5403213.5219467124 maxdiff=6.336026e-02 time=3.703796 comp=3.701300 comm_t=0.002044 reduce=0.000041 cells=4194304 halo=0
+exp=weak round=1 RESULT version=serial p=1 dims=1x1 comm=none N=2048 T=500 K=50 checksum=5403213.5219467124 maxdiff=6.336026e-02 time=3.779808 comp=3.779808 comm_t=0 reduce=0
+exp=weak round=1 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=2896 T=500 K=50 checksum=7653444.2805468766 maxdiff=6.336026e-02 time=6.913265 comp=6.722740 comm_t=0.216780 reduce=0.014697 cells=4193408 halo=2896
+exp=weak round=1 RESULT version=serial p=1 dims=1x1 comm=none N=2896 T=500 K=50 checksum=7653444.2805513320 maxdiff=6.336026e-02 time=7.962384 comp=7.962384 comm_t=0 reduce=0
+exp=weak round=1 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=14.321891 comp=11.728720 comm_t=2.693957 reduce=0.155438 cells=4194304 halo=4096
+exp=weak round=1 RESULT version=serial p=1 dims=1x1 comm=none N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=14.517228 comp=14.517228 comm_t=0 reduce=0
+exp=weak round=2 RESULT version=parallel p=1 dims=1x1 comm=nonblocking N=2048 T=500 K=50 checksum=5403213.5219467124 maxdiff=6.336026e-02 time=3.858250 comp=3.855694 comm_t=0.002176 reduce=0.000045 cells=4194304 halo=0
+exp=weak round=2 RESULT version=serial p=1 dims=1x1 comm=none N=2048 T=500 K=50 checksum=5403213.5219467124 maxdiff=6.336026e-02 time=3.836628 comp=3.836628 comm_t=0 reduce=0
+exp=weak round=2 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=2896 T=500 K=50 checksum=7653444.2805468766 maxdiff=6.336026e-02 time=7.057527 comp=6.836970 comm_t=0.320976 reduce=0.005378 cells=4193408 halo=2896
+exp=weak round=2 RESULT version=serial p=1 dims=1x1 comm=none N=2896 T=500 K=50 checksum=7653444.2805513320 maxdiff=6.336026e-02 time=10.763812 comp=10.763812 comm_t=0 reduce=0
+exp=weak round=2 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=20.545901 comp=15.627989 comm_t=5.431133 reduce=0.118470 cells=4194304 halo=4096
+exp=weak round=2 RESULT version=serial p=1 dims=1x1 comm=none N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=17.849215 comp=17.849215 comm_t=0 reduce=0
+exp=weak round=3 RESULT version=parallel p=1 dims=1x1 comm=nonblocking N=2048 T=500 K=50 checksum=5403213.5219467124 maxdiff=6.336026e-02 time=4.807015 comp=4.804193 comm_t=0.002256 reduce=0.000061 cells=4194304 halo=0
+exp=weak round=3 RESULT version=serial p=1 dims=1x1 comm=none N=2048 T=500 K=50 checksum=5403213.5219467124 maxdiff=6.336026e-02 time=5.821488 comp=5.821488 comm_t=0 reduce=0
+exp=weak round=3 RESULT version=parallel p=2 dims=2x1 comm=nonblocking N=2896 T=500 K=50 checksum=7653444.2805468766 maxdiff=6.336026e-02 time=9.926101 comp=9.388040 comm_t=0.629783 reduce=0.045354 cells=4193408 halo=2896
+exp=weak round=3 RESULT version=serial p=1 dims=1x1 comm=none N=2896 T=500 K=50 checksum=7653444.2805513320 maxdiff=6.336026e-02 time=12.847220 comp=12.847220 comm_t=0 reduce=0
+exp=weak round=3 RESULT version=parallel p=4 dims=2x2 comm=nonblocking N=4096 T=500 K=50 checksum=10837733.0898802113 maxdiff=6.336026e-02 time=19.196261 comp=14.974193 comm_t=4.333174 reduce=0.187289 cells=4194304 halo=4096
+exp=weak round=3 RESULT version=serial p=1 dims=1x1 comm=none N=4096 T=500 K=50 checksum=10837733.0898865256 maxdiff=6.336026e-02 time=20.880230 comp=20.880230 comm_t=0 reduce=0

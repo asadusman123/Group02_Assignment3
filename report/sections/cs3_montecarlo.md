@@ -55,26 +55,26 @@ Black–Scholes price. Every run in this study satisfies that.
 ## Speedup and efficiency
 
 Machine: Intel Core i5-7300U (2 physical cores, 4 logical, 15 W), Ubuntu 26.04 under WSL2,
-GCC 15.2.0 `-O3 -march=native`, `OMP_PROC_BIND=close`. Laptop in its default power configuration
-(turbo enabled, on mains power). Nine interleaved rounds (serial, p = 1, 2, 4, repeated), with 5 s
-of cool-down between runs.
+GCC 15.2.0 `-O3 -march=native`, `OMP_PLACES=cores OMP_PROC_BIND=close`, so p = 2 uses one thread
+per (virtual) physical core and p = 4 uses two hyper-threads per core. Laptop in its default
+power configuration (turbo on, mains power). Nine interleaved rounds (serial, p = 1, 2, 4,
+repeated), with 5 s of cool-down between runs.
 
-| version | p | median (s) | min (s) | max (s) | spread max/min | S(p) median | S(p) min | E(p) min |
-|---|---|---|---|---|---|---|---|---|
-| serial | 1 | 10.220 | 4.504 | 17.153 | 3.81 | 1.00 | 1.00 | 1.00 |
-| parallel | 1 | 6.272 | 4.634 | 11.508 | 2.48 | 1.63 | 0.97 | 0.97 |
-| parallel | 2 | 4.758 | 3.211 | 8.204 | 2.55 | 2.15 | 1.40 | 0.70 |
-| parallel | 4 (HT) | 3.738 | 2.565 | 5.334 | 2.08 | 2.73 | 1.76 | 0.44 |
+| version | p | median (s) | min (s) | max (s) | spread max/min | S(p) median | E(p) median | S(p) min | E(p) min |
+|---|---|---|---|---|---|---|---|---|---|
+| serial | 1 | 4.362 | 4.261 | 5.385 | 1.26 | 1.00 | 1.00 | 1.00 | 1.00 |
+| parallel | 1 | 4.462 | 4.176 | 4.621 | 1.11 | 0.98 | 0.98 | 1.02 | 1.02 |
+| parallel | 2 | 3.110 | 3.051 | 4.475 | 1.47 | **1.40** | 0.70 | 1.40 | 0.70 |
+| parallel | 4 (HT) | 2.568 | 2.367 | 3.488 | 1.47 | **1.70** | 0.42 | 1.80 | 0.45 |
 
 ![CS3 speedup](../cs3_montecarlo/results/speedup.png)
 
-**Why the minimum is the primary statistic here.** Identical work varied by up to 3.8× between runs
-(serial: 4.5 s to 17.2 s). With that much noise, the median of 9 runs depends on which runs
-happened to land in a slow phase. The clearest evidence is that serial and parallel p = 1 execute
-the same code on the same samples: their **minimums agree within 3% (4.50 vs 4.63 s)**, but their
-**medians differ by 1.63× (10.2 vs 6.3 s)**. A median-based "speedup" of 2.15 on 2 cores is
-therefore an artefact of noise, not a result. We report the median as the brief requires, but we
-interpret the minimum, which is the run with the least interference from throttling and the OS.
+**Measurement noise.** The same work can take very different times on this laptop. In an earlier
+run, made while the machine was in a hot, throttling state, serial times ranged from 4.5 to 17.2 s
+(3.8×), and the median-based speedups were meaningless: 2.15 on 2 cores. That is why the tables
+report both the median (as the brief requires) and the minimum, which is the run with the least
+interference. In the run reported above, the spread was 1.1–1.5×, and median and minimum agree
+(S(2) = 1.40 for both). We therefore treat these numbers as reliable.
 
 ## Critical analysis
 
@@ -84,23 +84,24 @@ We ran two broken strategies at p = 4 (`./parallel M 42 shared|sameseed`):
 
 | strategy | M | throughput (M samples/s) | price | reported SE | true SE |
 |---|---|---|---|---|---|
-| independent streams (jump) | 10⁸ | 15.68 | 10.451660 | 0.001472 | 0.001472 |
-| one shared generator in `omp critical` | 2·10⁷ | **3.81** | 10.452101 | 0.003292 | 0.003292 |
-| every thread uses the same seed | 10⁸ | 13.73 | 10.452449 | 0.001472 | **0.002945** |
+| independent streams (jump) | 10⁸ | 40.52 | 10.451660 | 0.001472 | 0.001472 |
+| one shared generator in `omp critical` | 2·10⁷ | **8.95** | 10.452101 | 0.003292 | 0.003292 |
+| every thread uses the same seed | 10⁸ | 41.03 | 10.452449 | 0.001472 | **0.002945** |
 
 - **Shared generator → serialization.** The price is still statistically correct (0.46 SE from
-  Black–Scholes), but throughput collapses to 3.81 M samples/s. That is 4.1× slower than the
-  correct 4-thread version, and 5.8× slower than the *serial* program's best of 22.2 M/s. Every
-  pair of normals needs the lock, so only one thread can draw at a time. On top of that, the
-  32-byte generator state and the lock bounce between the two cores' caches on every draw, so
-  four threads end up slower than one.
+  Black–Scholes), but throughput falls to 8.95 M samples/s. That is 4.5× slower than the correct
+  4-thread version and **2.6× slower than the serial program** (23.5 M/s at its best time of
+  4.261 s). Every pair of normals needs the lock, so only one thread can draw at a time. On top of
+  that, the 32-byte generator state and the lock bounce between the cores' caches on every draw,
+  so four threads end up slower than one.
 - **Same seed → correlated streams and a wrong error bar.** All four threads replay the same
-  sequence, so the 10⁸ "samples" are 4 copies of 2.5·10⁷. We verified this directly: the p = 4
-  `sameseed` price, **10.4524486110**, is bit-identical to the serial program with M = 2.5·10⁷
-  (`./serial 25000000 42`), whose SE is 0.0029447. The program reports SE = 0.001472 because it
-  assumes 10⁸ independent samples, so the **error bar is too small by a factor √p = 2**. A
-  95% confidence interval built from it would cover the true price far less often than 95% of the
-  time. Nothing in the output warns you, and that is what makes this bug dangerous.
+  sequence, so the 10⁸ "samples" are 4 copies of 2.5·10⁷. It runs as fast as the correct version
+  and nothing looks wrong. We verified it directly: the `sameseed` price, **10.4524486110**, is
+  bit-identical to the serial program with M = 2.5·10⁷ (`./serial 25000000 42`), whose SE is
+  0.0029447. The program reports SE = 0.001472 because it assumes 10⁸ independent samples, so the
+  **error bar is too small by a factor √p = 2**. A 95% confidence interval built from it would
+  cover the true price far less often than 95% of the time. That silent failure is what makes this
+  bug more dangerous than the slow one.
 
 ### Q2 — Statistical vs parallel efficiency
 
@@ -110,56 +111,54 @@ With a fixed time budget t, p threads process M = S(p)·M₁ samples, so
     SE_p / SE_1 = 1/√S(p).
 
 **Fixed-time experiment.** We chose M for each p so that every configuration would finish in the
-serial best time of 4.5 s, using the min-based throughput from the strong-scaling runs
-(M = 10⁸ × 4.504 / T_min(p)). Each configuration was run 3 times, interleaved
-(`results/fixed_time_min.csv`). The SE depends only on M and the seed, so it is exact and
-identical across rounds. The wall times are not:
+serial best time (4.261 s), using the min-based throughput from the strong-scaling runs
+(M_p = 10⁸ × T_serial,min / T_p,min). Each configuration was run 3 times, interleaved
+(`results/fixed_time.csv`). The SE depends only on M and the seed, so it is exact; all three
+configurations finished in 4.37–4.39 s at best, so the time budget really was equal.
 
-| p | M (samples) | SE | SE₁/SE_p | √(M_p/M₁) | best time (s) | all 3 times (s) |
-|---|---|---|---|---|---|---|
-| 1 | 97,190,000 | 0.0014934 | 1.00 | 1.00 | 6.01 | 6.01, 14.66, 7.30 |
-| 2 | 140,270,000 | 0.0012430 | 1.20 | 1.20 | 4.61 | 5.46, 4.61, 13.38 |
-| 4 | 175,590,000 | 0.0011109 | 1.34 | 1.34 | 7.61 | 9.97, 7.61, 9.97 |
+| p | M (samples) | SE | SE₁/SE_p | √(M_p/M₁) | min time (s) | median time (s) | price (deviation) |
+|---|---|---|---|---|---|---|---|
+| 1 | 102,043,462 | 0.0014574 | 1.000 | 1.000 | 4.376 | 5.023 | 10.451644 (0.73 SE) |
+| 2 | 139,666,278 | 0.0012457 | 1.170 | 1.170 | 4.391 | 4.469 | 10.451464 (0.71 SE) |
+| 4 | 180,021,974 | 0.0010971 | 1.328 | 1.328 | 4.369 | 5.045 | 10.452038 (1.33 SE) |
 
-With the same time budget, 4 threads reduce the error by only **1.34×**, which is √1.81: the
-square root of the throughput gain. They do not reduce it by 1.81×, and certainly not by 4×. A
-parallel speedup S buys a √S reduction in error. Halving the error needs 4× as many samples, so it
-would need S = 4 at fixed time, more than this machine can deliver even in its best state. In
-accuracy terms, "speedup" means either reaching the same SE in 1/S of the time, or reaching a
-√S-times smaller SE in the same time. The usual Monte Carlo figure of merit, 1/(SE²·t), grows
-linearly with S, and that is what parallelism actually improves.
-
-During this batch the laptop was in a slower state than in the strong-scaling runs: no
-configuration reached the 4.5 s target, and p = 1 ranged from 6.0 to 14.7 s for identical work.
-The table therefore shows the error side of the trade-off exactly, while its time side is subject
-to the same thermal and turbo noise discussed in Q3.
+With the same ≈4.4 s budget, 4 threads reduce the error by only **1.33×**, which is
+√1.76: the square root of the throughput gain. They do not reduce it by 1.76×, and certainly not
+by 4×. A parallel speedup S buys only a √S reduction in error. Halving the error needs 4× as many
+samples, so it would need S = 4 at fixed time. In accuracy terms, "speedup" means either reaching
+the same SE in 1/S of the time, or reaching a √S-times smaller SE in the same time. The standard
+Monte Carlo figure of merit, 1/(SE²·t), grows linearly with S, and that is the quantity
+parallelism actually improves.
 
 ### Q3 — Why it (should) scale almost perfectly
 
 **Serial fraction of the code.** The only non-parallel work is thread start-up, p generator
 seedings and at most p − 1 jumps (each jump is 256 generator steps), and the final p-term
-reduction. That is a few microseconds against a 4.5 s run: f_code < 10⁻⁵. By Amdahl's law the
-code alone would give S(2) ≈ 2.00.
+reduction. That is a few microseconds against a 4.3 s run: f_code < 10⁻⁵. Per-thread imbalance
+(slowest/mean thread) was 1.001–1.013. By Amdahl's law the code alone would give S(2) ≈ 2.00.
 
-**Measured serial fraction.** Karp–Flatt, f = (1/S − 1/p)/(1 − 1/p), gives f ≈ 0.43 at both p = 2
-and p = 4 (min-based). This f is not serial code. It is hardware losses that Amdahl's model does
-not include, because Amdahl assumes every core runs at the same speed regardless of how many are
-busy:
+**Measured serial fraction.** Karp–Flatt, f = (1/S − 1/p)/(1 − 1/p), gives f ≈ 0.43 at p = 2 and
+0.41–0.45 at p = 4. A value this large and this constant is not serial code. It is hardware
+losses that Amdahl's model leaves out, because Amdahl assumes every core runs at the same speed
+however many are busy:
 
-1. **Turbo and power limit.** The i5-7300U turbos to its highest clock with one core active, and
-   both its turbo table and its 15 W package power limit lower the clock when both cores are
-   busy. A one-thread run therefore gets a faster core than each thread of a two-thread run. The
-   3.8× run-to-run spread for identical serial work shows how strongly clock and thermal state
-   drive time on this machine.
-2. **Hyper-threading.** Going from p = 2 to p = 4 improved time by 1.25× (3.211 → 2.565 s), not
-   2×. Two hardware threads share one core's floating-point units. The gain comes from one thread
-   filling the stall cycles left by the long-latency `exp`/`log`/`sin`/`cos` dependency chains of
-   the other.
-3. **OS and virtualization interference.** WSL2 runs as a Hyper-V VM. With every core busy, any
-   Windows background activity pre-empts one of our threads, and the parallel region waits for
-   the slowest thread.
-4. **Reduction and start-up.** Negligible, see above. Serial vs p = 1 differs by 3% (4.50 vs
-   4.63 s), which bounds the cost of the OpenMP runtime plus noise.
+1. **Turbo and power limit.** The i5-7300U runs its highest turbo clock with one core active.
+   Both its turbo table and its 15 W package power limit lower the clock when both cores are busy,
+   so each thread of a two-thread run gets a slower core than a one-thread run does. The earlier
+   run's 3.8× spread for identical serial work shows how strongly clock and thermal state drive
+   time on this machine.
+2. **Hyper-threading.** p = 2 → 4 adds two hyper-threads that share the cores' floating-point
+   units, and gains only **1.21× (median) / 1.29× (min)**, not 2×. The gain comes from one thread
+   filling the stall cycles of the other's long `exp`/`log`/`sin`/`cos` dependency chains.
+3. **Virtualization: we do not control physical placement.** WSL2 runs Linux as a Hyper-V virtual
+   machine. `OMP_PLACES=cores` pins threads to *virtual* CPUs, and Windows then decides which host
+   logical processors those run on. Evidence: an earlier run without `OMP_PLACES=cores`, where
+   both threads were pinned to virtual CPUs 0 and 1 (hyper-threads of the same virtual core),
+   gave the **same S(2) = 1.40**. If guest-side pinning controlled the hardware, one core with
+   hyper-threading would have been clearly slower than two cores. The host scheduler (and any
+   Windows background activity on the two cores) is therefore part of the 0.43.
+4. **Reduction and start-up.** Negligible, as computed above. Serial and p = 1 agree within noise
+   (4.36 vs 4.46 s median, 4.26 vs 4.18 s min).
 
 ### Q4 — Reproducibility
 

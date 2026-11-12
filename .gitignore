@@ -6,3 +6,5 @@ parallel
 serial_omp
 assoc
 membench
+*.bin
+gen
