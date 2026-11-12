@@ -1,0 +1,9 @@
+date:     Thu Nov 12 15:49:20 PKT 2026
+CPU(s):                                  4
+Model name:                              Intel(R) Core(TM) i5-7300U CPU @ 2.60GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      2
+Socket(s):                               1
+Mem:           9.7Gi       572Mi       9.0Gi       4.1Mi       273Mi       9.1Gi
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+OMP_PROC_BIND=close  rounds=5  M=100000000  cool-down=5s
