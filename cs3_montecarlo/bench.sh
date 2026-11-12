@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # bench.sh - timing runs for Case Study 3.
 #
-# Usage:  ./bench.sh [rounds] [M]          defaults: 5 rounds, M = 1e8
+# Usage:  ./bench.sh [rounds] [M]          defaults: 9 rounds, M = 1e8
 #         COOL=10 ./bench.sh               seconds of cool-down between runs
 #
 # Runs are INTERLEAVED (serial, p=1, p=2, p=4, serial, p=1, ...) so that slow
@@ -9,7 +9,7 @@
 # configuration equally instead of biasing whichever ran last.
 set -euo pipefail
 
-R=${1:-5}
+R=${1:-9}
 M=${2:-100000000}
 SEED=42
 PS=${PS:-"1 2 4"}

@@ -2,3 +2,5 @@ serial
 parallel
 *.o
 *.out
+*Zone.Identifier
+serial_omp

@@ -32,17 +32,20 @@ ps = sorted(p for v, p in times if v == "parallel")
 lines = ["## Strong scaling (M fixed)", "",
          f"Median of {nruns} interleaved runs. Speedup is relative to the serial baseline "
          f"(T1 = {T1:.3f} s). p > {PHYS_CORES} uses hyper-threading.", "",
-         "| version | p | median time (s) | min | max | speedup S(p) | efficiency E(p) |",
-         "|---|---|---|---|---|---|---|"]
+         "| version | p | median time (s) | min | max | spread max/min | S(p) median | E(p) median | S(p) from min | E(p) from min |",
+         "|---|---|---|---|---|---|---|---|---|---|"]
 t = times[("serial", 1)]
-lines.append(f"| serial | 1 | {T1:.3f} | {min(t):.3f} | {max(t):.3f} | 1.00 | 1.00 |")
-S, E = {}, {}
+T1min = min(t)
+lines.append(f"| serial | 1 | {T1:.3f} | {min(t):.3f} | {max(t):.3f} | {max(t)/min(t):.2f} | 1.00 | 1.00 | 1.00 | 1.00 |")
+S, E, Smin = {}, {}, {}
 for p in ps:
     t = times[("parallel", p)]
     tp = statistics.median(t)
     S[p] = T1 / tp
     E[p] = S[p] / p
-    lines.append(f"| parallel | {p} | {tp:.3f} | {min(t):.3f} | {max(t):.3f} | {S[p]:.2f} | {E[p]:.2f} |")
+    Smin[p] = T1min / min(t)
+    lines.append(f"| parallel | {p} | {tp:.3f} | {min(t):.3f} | {max(t):.3f} | {max(t)/min(t):.2f} | "
+                 f"{S[p]:.2f} | {E[p]:.2f} | {Smin[p]:.2f} | {Smin[p]/p:.2f} |")
 
 # Karp-Flatt experimentally determined serial fraction
 lines += ["", "Experimentally determined serial fraction (Karp-Flatt), "
@@ -50,7 +53,8 @@ lines += ["", "Experimentally determined serial fraction (Karp-Flatt), "
 for p in ps:
     if p > 1:
         f = (1 / S[p] - 1 / p) / (1 - 1 / p)
-        lines.append(f"- p = {p}: f = {f:.3f}")
+        fm = (1 / Smin[p] - 1 / p) / (1 - 1 / p)
+        lines.append(f"- p = {p}: f = {f:.3f} (median-based), {fm:.3f} (min-based)")
 
 # ---------- fixed-time accuracy ----------
 try:
@@ -88,7 +92,8 @@ print("\n".join(lines))
 # ---------- graph ----------
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4))
 xs = ps
-ax1.plot(xs, [S[p] for p in xs], "o-", label="measured")
+ax1.plot(xs, [S[p] for p in xs], "o-", label="median-based")
+ax1.plot(xs, [Smin[p] for p in xs], "^:", label="min-based (least interference)")
 ax1.plot(xs, xs, "--", color="grey", label="ideal S(p) = p")
 ax1.axvspan(PHYS_CORES, max(xs) + 0.3, color="orange", alpha=0.12,
             label="hyper-threading (p > physical cores)")
@@ -99,13 +104,15 @@ ax1.set_title(f"CS3 Monte Carlo, M = {int(rows[0]['M']):.0e}")
 ax1.legend(fontsize=8)
 ax1.grid(alpha=0.3)
 
-ax2.plot(xs, [E[p] for p in xs], "s-", color="tab:green")
+ax2.plot(xs, [E[p] for p in xs], "o-", label="median-based")
+ax2.plot(xs, [Smin[p] / p for p in xs], "^:", label="min-based")
+ax2.legend(fontsize=8)
 ax2.axhline(1.0, ls="--", color="grey")
 ax2.axvspan(PHYS_CORES, max(xs) + 0.3, color="orange", alpha=0.12)
 ax2.set_xlabel("threads p")
 ax2.set_ylabel("efficiency E(p) = S(p) / p")
 ax2.set_xticks(xs)
-ax2.set_ylim(0, 1.1)
+ax2.set_ylim(0, 1.3)
 ax2.set_title(f"each point = median of {nruns} runs")
 ax2.grid(alpha=0.3)
 
