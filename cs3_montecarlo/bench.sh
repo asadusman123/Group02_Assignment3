@@ -16,7 +16,10 @@ PS=${PS:-"1 2 4"}
 COOL=${COOL:-5}
 OUT=results
 mkdir -p "$OUT"
-export OMP_PROC_BIND=close
+# One thread per PHYSICAL core first: on this machine logical CPUs 0,1 share
+# core 0 and 2,3 share core 1, so without OMP_PLACES=cores "p=2" would put
+# both threads on the same core (hyper-threads).
+export OMP_PLACES=cores OMP_PROC_BIND=close
 
 # turn a RESULT line into "p,M,price,se,time"
 parse() { sed -n 's/^RESULT .* p=\([0-9]*\) M=\([0-9]*\) .*price=\([^ ]*\) se=\([^ ]*\) time=\([^ ]*\).*/\1,\2,\3,\4,\5/p'; }
@@ -27,9 +30,10 @@ make -s all
 {
   echo "date:     $(date)"
   lscpu | grep -E 'Model name|^CPU\(s\)|Thread\(s\) per core|Core\(s\) per socket|Socket\(s\)'
+  echo; lscpu -e; echo
   free -h | grep Mem
   gcc --version | head -1
-  echo "OMP_PROC_BIND=$OMP_PROC_BIND  rounds=$R  M=$M  cool-down=${COOL}s"
+  echo "OMP_PLACES=$OMP_PLACES OMP_PROC_BIND=$OMP_PROC_BIND  rounds=$R  M=$M  cool-down=${COOL}s"
 } > "$OUT/machine.txt"
 
 # ---- 1. strong scaling (fixed M) ----
@@ -44,22 +48,28 @@ for r in $(seq 1 "$R"); do
   done
 done
 
-# ---- 2. fixed-time runs: give each p the M it can finish in ~T_serial ----
+# ---- 2. fixed-time runs: give each p the M it can finish in the serial best time ----
+# M_p = M * T_serial,min / T_p,min  (minimum = least-interference run), 3 interleaved rounds
 CSV2="$OUT/fixed_time.csv"
-echo "version,p,M,price,se,time" > "$CSV2"
+echo "round,version,p,M,price,se,time" > "$CSV2"
+declare -A MP
 for p in $PS; do
-  Mp=$(python3 - "$CSV" "$p" "$M" <<'PY'
-import csv, statistics, sys
+  MP[$p]=$(python3 - "$CSV" "$p" "$M" <<'PY'
+import csv, sys
 rows = list(csv.DictReader(open(sys.argv[1])))
 p, M = int(sys.argv[2]), int(sys.argv[3])
-t1 = statistics.median(float(r["time"]) for r in rows if r["version"] == "serial")
-tp = statistics.median(float(r["time"]) for r in rows if r["version"] == "parallel" and int(r["p"]) == p)
+t1 = min(float(r["time"]) for r in rows if r["version"] == "serial")
+tp = min(float(r["time"]) for r in rows if r["version"] == "parallel" and int(r["p"]) == p)
 print(int(M * t1 / tp) // 2 * 2)
 PY
 )
-  echo "fixed-time p=$p  M=$Mp"
-  echo "parallel,$(OMP_NUM_THREADS=$p ./parallel "$Mp" $SEED jump | parse)" >> "$CSV2"
-  sleep "$COOL"
+done
+for r in 1 2 3; do
+  for p in $PS; do
+    echo "fixed-time round $r p=$p M=${MP[$p]}"
+    echo "$r,parallel,$(OMP_NUM_THREADS=$p ./parallel "${MP[$p]}" $SEED jump | parse)" >> "$CSV2"
+    sleep "$COOL"
+  done
 done
 
 # ---- 3. the two broken RNG strategies (critical analysis Q1) ----

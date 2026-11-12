@@ -55,17 +55,28 @@ for p in ps:
         f = (1 / S[p] - 1 / p) / (1 - 1 / p)
         fm = (1 / Smin[p] - 1 / p) / (1 - 1 / p)
         lines.append(f"- p = {p}: f = {f:.3f} (median-based), {fm:.3f} (min-based)")
+lines += ["", f"Thread placement: OMP_PLACES=cores, OMP_PROC_BIND=close -> p <= {PHYS_CORES} uses one thread "
+          f"per physical core; p = 4 puts two hyper-threads on each core."]
 
 # ---------- fixed-time accuracy ----------
 try:
     ft = read("fixed_time.csv")
-    lines += ["", "## Fixed-time runs (accuracy per second)", "",
-              "| p | samples M | time (s) | price | std. error | deviation from BS (in SE) |",
-              "|---|---|---|---|---|---|"]
+    by_p = defaultdict(list)
     for r in ft:
-        se, pr = float(r["se"]), float(r["price"])
-        lines.append(f"| {r['p']} | {int(r['M']):,} | {float(r['time']):.3f} | {pr:.6f} | "
-                     f"{se:.6f} | {abs(pr - BS_PRICE) / se:.2f} |")
+        by_p[int(r["p"])].append(r)
+    se1 = float(by_p[min(by_p)][0]["se"])
+    M1 = int(by_p[min(by_p)][0]["M"])
+    lines += ["", "## Fixed-time runs (M_p chosen to finish in the serial best time)", "",
+              f"SE depends only on M and the seed, so it is identical in every round. "
+              f"Target time = serial minimum = {T1min:.3f} s.", "",
+              "| p | samples M | SE | SE_1 / SE_p | sqrt(M_p / M_1) | median time (s) | min time (s) | price | deviation from BS (in SE) |",
+              "|---|---|---|---|---|---|---|---|---|"]
+    for p in sorted(by_p):
+        rs = by_p[p]
+        se, pr, Mp = float(rs[0]["se"]), float(rs[0]["price"]), int(rs[0]["M"])
+        ts = [float(r["time"]) for r in rs]
+        lines.append(f"| {p} | {Mp:,} | {se:.7f} | {se1 / se:.3f} | {math.sqrt(Mp / M1):.3f} | "
+                     f"{statistics.median(ts):.3f} | {min(ts):.3f} | {pr:.6f} | {abs(pr - BS_PRICE) / se:.2f} |")
 except FileNotFoundError:
     pass
 
