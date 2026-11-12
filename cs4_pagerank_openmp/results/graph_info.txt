@@ -1,0 +1,6 @@
+R-MAT scale=20 edgefactor=16 seed=2026 -> graph_s20.bin
+vertices n = 1048576, edges drawn = 16777216, kept m = 16085679 (after removing self-loops/duplicates)
+max in-degree 39615, max out-degree 39581, average degree 15.34
+dangling vertices (out-degree 0): 501933 (47.9%), isolated: 401900
+file size 130.7 MiB, generation 11.04 s
+RESULT gen n=1048576 m=16085679 maxin=39615 maxout=39581 dangling=501933 isolated=401900
