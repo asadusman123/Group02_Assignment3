@@ -1,0 +1,12 @@
+date: Thu Nov 12 21:22:09 PKT 2026
+CPU(s):                                  4
+Model name:                              Intel(R) Core(TM) i5-7300U CPU @ 2.60GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      2
+L1d cache:                               64 KiB (2 instances)
+L2 cache:                                512 KiB (2 instances)
+L3 cache:                                3 MiB (1 instance)
+Mem:           9.7Gi       619Mi       8.9Gi       4.3Mi       293Mi       9.1Gi
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+                Open MPI: 5.0.10
+N=100000000 rounds=3; p<=2: mpirun --bind-to core ; p=4: mpirun --map-by :OVERSUBSCRIBE
