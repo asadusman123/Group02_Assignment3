@@ -1,0 +1,24 @@
+@page { size: A4; margin: 15mm 16mm 16mm 16mm;
+  @bottom-center { content: counter(page); font-size: 8.5pt; color: #555; } }
+html { font-family: "TeX Gyre Pagella", "Palatino Linotype", "DejaVu Serif", serif; font-size: 10.3pt; line-height: 1.36; color: #111; }
+body { margin: 0; }
+header#title-block-header { text-align: center; margin-bottom: 6px; }
+h1.title { font-size: 16pt; margin: 0 0 2px 0; }
+p.subtitle { font-size: 12pt; margin: 0 0 4px 0; }
+p.author, p.date { margin: 0; font-size: 10pt; }
+h1 { font-size: 12.5pt; margin: 12px 0 4px 0; border-bottom: 1px solid #999; padding-bottom: 2px; page-break-after: avoid; }
+h2 { font-size: 11pt; margin: 10px 0 3px 0; page-break-after: avoid; }
+h3 { font-size: 10pt; margin: 8px 0 3px 0; page-break-after: avoid; }
+p { margin: 3px 0 5px 0; text-align: justify; }
+table { border-collapse: collapse; margin: 5px auto 6px auto; font-size: 8.8pt; page-break-inside: avoid; }
+th, td { border: 1px solid #bbb; padding: 1.5px 5px; }
+th { background: #eef1f5; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 8.3pt; }
+img { display: block; margin: 4px auto; max-width: 100%; }
+p > img { display: inline-block; vertical-align: top; margin: 2px 0.5%; }
+p:has(> img) { text-align: center; page-break-inside: avoid; margin: 2px 0; }
+figure { margin: 4px 0; text-align: center; page-break-inside: avoid; }
+figcaption { display: none; }
+em { color: #333; }
+.appendix table { font-size: 7.4pt; }
+h1[id^="case-study"], h1[id^="cross-case"], h1[id^="appendix"] { page-break-before: always; }

@@ -112,7 +112,7 @@ fig, ax = plt.subplots(figsize=(5.5, 4))
 ax.loglog([d for d, c in zip(deg, cin) if c], [c for c in cin if c], ".", ms=3, label="in-degree")
 ax.loglog([d for d, c in zip(deg, cout) if c], [c for c in cout if c], ".", ms=3, alpha=0.6, label="out-degree")
 ax.set_xlabel("degree"); ax.set_ylabel("number of vertices")
-ax.set_title(f"CS4 degree distribution, R-MAT scale 20 (m = {m / 1e6:.1f} M)")
+ax.set_title(f"CS4 degree distribution, R-MAT scale 20 (m = {m / 1e6:.1f} M; one generated graph)")
 ax.grid(alpha=0.3, which="both"); ax.legend()
 fig.tight_layout(); fig.savefig(f"{OUT}/degrees.png", dpi=200)
 
@@ -139,6 +139,6 @@ for p, col in ((2, "tab:blue"), (4, "tab:purple")):
     if sw.get((p, "guided")):
         ax.axhline(med(sw[(p, "guided")], "time"), ls=":", color=col, alpha=0.8, label=f"guided  p={p}")
 ax.set_xlabel("chunk size c (vertices)"); ax.set_ylabel("time (s), median")
-ax.set_title("CS4 pull: schedule and chunk size"); ax.grid(alpha=0.3, which="both"); ax.legend(fontsize=7.5)
+ax.set_title(f"CS4 pull: schedule and chunk size (median of {len(sw[(4, 'static')])} runs)"); ax.grid(alpha=0.3, which="both"); ax.legend(fontsize=7.5)
 fig.tight_layout(); fig.savefig(f"{OUT}/schedules.png", dpi=200)
 print(f"\nwrote {OUT}/tables.md, degrees.png, speedup.png, schedules.png")

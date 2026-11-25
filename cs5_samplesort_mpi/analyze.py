@@ -140,8 +140,8 @@ for ax, srt in zip(axes, ("qsort", "radix")):
         base = [sum(med(rs, kk) for kk, _ in phases[:i]) for (_, _, _, _, rs) in xs]
         ax.bar([xx[0] for xx in xs], vals, bottom=base, color=cols[i], label=name)
     ax.set_xticks([xx[0] for xx in xs]); ax.set_xticklabels(labels, fontsize=7.5)
-    ax.set_ylabel("seconds (median, barrier-to-barrier)")
-    ax.set_title(f"CS5 phase breakdown, local sort = {srt}, N = 1e8")
+    ax.set_ylabel("time (s), barrier-to-barrier")
+    ax.set_title(f"CS5 phase breakdown, local sort = {srt}, N = 1e8 (median of {nr} runs)")
     ax.grid(axis="y", alpha=0.3)
 axes[0].legend(fontsize=8)
 fig.tight_layout(); fig.savefig(f"{OUT}/phases.png", dpi=200); fig.savefig(f"{OUT}/phases.pdf")
@@ -149,7 +149,7 @@ fig.tight_layout(); fig.savefig(f"{OUT}/phases.png", dpi=200); fig.savefig(f"{OU
 fig, ax = plt.subplots(figsize=(6, 4))
 ax.loglog(sizes, [tbest[m] * 1e6 for m in sizes], "o", label="measured (one-way)")
 ax.loglog(sizes, [(alpha + beta * m) * 1e6 for m in sizes], "-", label=f"alpha + beta m (alpha={alpha * 1e6:.2f} us, {1 / beta / 1e9:.1f} GB/s)")
-ax.set_xlabel("message size (bytes)"); ax.set_ylabel("time (us)"); ax.set_title("CS5 ping-pong, 2 ranks on separate cores")
+ax.set_xlabel("message size (bytes)"); ax.set_ylabel("one-way time (us)"); ax.set_title(f"CS5 ping-pong, 2 ranks (best of {len(pp[sizes[0]])} rounds)")
 ax.grid(alpha=0.3, which="both"); ax.legend(fontsize=8)
 fig.tight_layout(); fig.savefig(f"{OUT}/pingpong.png", dpi=200)
 
@@ -162,6 +162,6 @@ for key, col in (((4, "zipf", 0), "tab:red"), ((4, "zipf", 1), "tab:blue"), ((4,
                     label=f"p={key[0]} {key[1]}, {'key+rank+pos' if key[2] else 'key only'}")
 ax.axhline(1, ls=":", color="grey")
 ax.set_xlabel("oversampling factor ov (ov*p - 1 samples per rank)"); ax.set_ylabel("max / mean elements per rank")
-ax.set_title("CS5 load balance after redistribution"); ax.grid(alpha=0.3, which="both"); ax.legend(fontsize=7.5)
+ax.set_title("CS5 load balance after redistribution (N = 1e8, 1 run each:\ncounts are deterministic for a given seed)", fontsize=10); ax.grid(alpha=0.3, which="both"); ax.legend(fontsize=7.5)
 fig.tight_layout(); fig.savefig(f"{OUT}/oversampling.png", dpi=200)
 print(f"\nwrote {OUT}/tables.md, phases.png, pingpong.png, oversampling.png")
